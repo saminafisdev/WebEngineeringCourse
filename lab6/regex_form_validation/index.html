@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <link rel="stylesheet" href="style.css">
+  <title>Student Form with Emoji & Cucumber Themes</title>
+</head>
+<body class="theme-night">
+
+  <!-- Background Elements -->
+  <div class="stars"></div>
+  <div class="shooting-star"></div>
+  <div class="shooting-star"></div>
+  <div class="shooting-star"></div>
+
+  <!-- Form -->
+  <div class="form-container">
+    <div class="theme-toggle">
+      <span onclick="toggleDarkMode()" title="Toggle Dark Mode">🌙</span>
+    </div>
+    <div class="theme-controls">
+      <label for="themeSelector">Select Theme:</label>
+      <select id="themeSelector" onchange="changeTheme(this.value)">
+        <option value="night">🌌 Starry Sky</option>
+        <option value="gradient">🌈 Gradient</option>
+        <option value="emoji">😊 Emoji</option>
+        <option value="cucumber">🥒 Cucumber Grid</option>
+      </select>
+    </div>
+
+    <h2>Student Form</h2>
+    <form id="myForm" onsubmit="return validateForm()">
+      <label for="email">Email:</label>
+      <input type="text" id="email" name="email" required>
+      <div class="error" id="emailError">Email must end with @diu.edu.bd</div>
+
+      <label for="studentId">Student ID (xxx-xx-xxxx):</label>
+      <input type="text" id="studentId" name="studentId" required>
+      <div class="error" id="idError">ID must be in the format xxx-xx-xxxx</div>
+
+      <label for="name">Name:</label>
+      <input type="text" id="name" name="name" required>
+      <div class="error" id="nameError">Name must contain only letters and spaces</div>
+
+      <button type="submit">Submit</button>
+      <div class="success" id="successMessage"></div>
+    </form>
+  </div>
+
+  <script src="main.js"></script>
+</body>
+</html>
