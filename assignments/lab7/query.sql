@@ -1,0 +1,13 @@
+-- Active: 1734502608057@@127.0.0.1@3306@crud
+CREATE DATABASE CRUD;
+
+USE CRUD;
+
+CREATE TABLE booklist (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    title VARCHAR(255) NOT NULL,
+    author VARCHAR(255) NOT NULL,
+    description TEXT,
+    genre VARCHAR(100),
+    best_selling TINYINT(1) DEFAULT 0
+);
